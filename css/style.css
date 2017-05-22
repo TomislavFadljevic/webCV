@@ -63,24 +63,24 @@ h1, h2, h3, h4, h5, h6 {font-family:Raleway;font-weight:700; color:#202020; marg
 /**** END - FADE ********/
 
 body {
-scrollbar-face-color: #f48f4c;
+scrollbar-face-color: #ff7215;
 }
 ::-webkit-scrollbar{ width: 10px; }
-::-webkit-scrollbar-thumb{ background-color: #f48f4c; }
+::-webkit-scrollbar-thumb{ background-color: #ff7215; }
 
 /**** BANNER WITH NAME ****/
 .banner{
     min-height: 100vh;
     text-align: center;
-    background-image: url(../img/high_road_02.jpg);
+    background-image: url(../img/banner.jpg);
     background-position: center 0px;
     background-repeat: no-repeat;
     background-size: cover; 
     background-attachment: fixed;
-    animation: fadein 2s;
-    -moz-animation: fadein 2s; /* Firefox */
-    -webkit-animation: fadein 2s; /* Safari and Chrome */
-    -o-animation: fadein 2s; /* Opera */
+    animation: fadein 1s;
+    -moz-animation: fadein 1s; /* Firefox */
+    -webkit-animation: fadein 1s; /* Safari and Chrome */
+    -o-animation: fadein 1s; /* Opera */
 }
     .banner:after {
         content: "";
@@ -157,8 +157,8 @@ scrollbar-face-color: #f48f4c;
         margin: 10px;
         color:white;
     }
-    .socialBar a:hover, a:active{
-        color:#CC5200;
+    .socialBar a:hover {
+        color: #ff7215;
         background: transparent;
         -webkit-transition-duration: 0.3s; /* Safari */
         transition-duration: 0.3s;
@@ -179,7 +179,7 @@ scrollbar-face-color: #f48f4c;
 }
 .logo{
     padding: 14px 0px;
-    background: #CC5200;
+    background: #ff7215;
     width: 80px;
     display: inline-block;
     float: left;
@@ -209,7 +209,7 @@ scrollbar-face-color: #f48f4c;
 
 .nav a {
     display: block;
-    padding: 35px 22px;
+    padding: 35px 15px;
     font-size: 0.9em;
     font-weight: bold;
     text-align: center;
@@ -221,10 +221,10 @@ scrollbar-face-color: #f48f4c;
 }
 
 ul a:hover {
-    color: #CC5200; 
+    color: #ff7215; 
 }
 .active{
-    color: #CC5200 !important;
+    color: #ff7215 !important;
 }
 
 .fixedTop {
@@ -237,7 +237,7 @@ ul a:hover {
     padding: 0px;
 }
 .shrink2{
-    padding: 20px 22px !important;
+    padding: 20px 15px !important;
 }
 
 /***** END - NAVIGATION AND LOGO ****/
@@ -270,7 +270,7 @@ ul a:hover {
         font-weight: 100;
     }
     .img-circle{
-        width:180px;
+        width:230px;
     }
 .contentHolder{
     padding: 100px 0px 100px 60px;
@@ -332,7 +332,7 @@ ul a:hover {
 /**** SKILLS ****/
 .skills{
     padding: 0px;
-    background-image: url(../img/work2.jpg);
+    background-image: url(../img/work3.jpg);
     background-position: center 0px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -358,13 +358,12 @@ ul a:hover {
 }
 .circle.col-md-4{
     margin: 80px 0px;
+    text-align: center;
 }
 
 #circle1 {
     position: relative;
     display: inline-block;
-    left: 50%;
-    transform: translate(-50%, 0%);
     width: 180px;
     height: 180px;
     
@@ -372,16 +371,12 @@ ul a:hover {
 #circle2 {
     position: relative;
     display: inline-block;
-    left: 50%;
-    transform: translate(-50%, 0%);
     width: 180px;
     height: 180px;
 }
 #circle3 {
     position: relative;
     display: inline-block;
-    left: 50%;
-    transform: translate(-50%, 0%);
     width: 180px;
     height: 180px;
 }
@@ -449,12 +444,174 @@ ul a:hover {
 }
 /***** END - HOBBIES & INTERESTS ****/
 
+/***** PORTFOLIO *******/
+.portfolio, .gallery{
+    padding: 0px;
+    background: #f48f4c;
+}
+.gallery.container{
+    padding: 100px 0px 80px 0px;
+    text-align: center;
+}
+.gallery h1{
+    display: inline-block;
+    font-family: LeagueGothic;
+    color: #1C1C1C;
+    font-size: 32px;
+    margin-bottom: 35px;
+    text-align: center;
+    border-bottom: 1px solid #1C1C1C;
+}
+.zoom {
+    position: relative;
+    padding: 0px;
+    overflow: hidden;
+    cursor: pointer;
+    
+}
+.zoom:after {
+    content:"";
+    width:100%;
+    height:100%;
+    background:rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    position:absolute;
+    top:0;
+    left:0;
+    transition: all .4s;
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+} 
+.zoom:hover:after{
+    opacity: 1;
+}
+.zoom img{
+    -moz-transition: all .4s;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+}
+.zoom:hover img{
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    
+}
+.zoom i.fa.fa-search{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top:100%;
+    transform: translate(-50%,-100%);
+    opacity: 0;
+    -moz-transition: all 0.7s;
+    -webkit-transition: all 0.7s;
+    transition: all 0.7s;
+}
+.zoom:hover i.fa.fa-search{
+    display: inline;
+    position: absolute;
+    color: white;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top:100%;
+    transform: translate(-50%,-100%);
+    opacity: 1;
+    z-index:1;
+}
+.zoom i{
+    padding-top: 27%;
+}
+.gallery li {
+    padding: 5px;
+}
+
+/****** MODAL WINDOW *****/
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption { 
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+/***** END - PORTFOLIO *******/
+
 /**** CONTACT DETAILS *****/
 .con, .contact, .details, .map{
     padding: 0px;
 }
 .con{
-    background: #393939;
+    background: #1C1C1C;
 }
 .conWrap{
     text-align: left;
@@ -497,7 +654,7 @@ ul a:hover {
         margin: 0px;
         color:white;
     }
-    .about a:hover, a:active{
+    .about a:hover {
         color: #1e1e1e;
         font-weight: 900;
         background-color: white;
@@ -555,8 +712,8 @@ ul a:hover {
         margin: 10px;
         color:white;
     }
-    .social a:hover, a:active{
-        color:#CC5200;
+    .social a:hover {
+        color: #ff7215;
         background: transparent;
         -webkit-transition-duration: 0.3s; /* Safari */
         transition-duration: 0.3s;
@@ -568,8 +725,8 @@ ul a:hover {
 .toTop{
     position: fixed;
     bottom: 0px;
-    right: 45px;
-    background: #f48f4c;
+    right: 25px;
+    background: #ff7215;
     width: 50px;
     height: 50px;
     display: block;
@@ -613,6 +770,9 @@ ul a:hover {
         -webkit-transform:translate(0,0); /* Chrome, Safari, Opera */
         transform:translate(0, 0);
     }
+    .img-circle{
+        width:180px;
+    }
     .contentHolder{
         padding: 20px 0px;
     }
@@ -647,7 +807,7 @@ ul a:hover {
         margin: 50px 0px 0px 0px;
     }
     .hobbies{
-        padding-bottom: 55px;
+        padding-bottom: 90px;
     }
     .contact.container{
         padding: 0px 15px;
@@ -680,7 +840,18 @@ ul a:hover {
     }
     .toTop{
         right: 0px;
-    }    
+    }   
+    
+    
+    .zoom i{
+    padding-top: 28%;
+    }
+}
+
+@media only screen and (max-width: 767px){ 
+    .zoom i{
+        padding-top:30%;
+    }
 }
 /**** END - RESPONSIVE DIVS (EDUCATION) ****/
 
@@ -717,7 +888,7 @@ nav li {
 		transition:height 0.4s;
 	}
 .open {
-		height:325px;
+		height:385px;
 	}
 }
 

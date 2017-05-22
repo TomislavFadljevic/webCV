@@ -5,11 +5,11 @@ jQuery(document).ready(function() {
         offset: 100
        });
     jQuery('.barContent').addClass("unsee").viewportChecker({
-        classToAdd: 'see animated bounceInUp',
+        classToAdd: 'see animated fadeIn',
         offset: 100
        });
     jQuery('.iconContainer').addClass("unsee").viewportChecker({
-        classToAdd: 'see animated bounceInUp',
+        classToAdd: 'see animated fadeIn',
         offset: 100
        });
 });
