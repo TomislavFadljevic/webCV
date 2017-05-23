@@ -18,7 +18,7 @@ var bar = new ProgressBar.Circle(circle1, {
 
     var value = Math.round(circle.value() * 100);
     if (value === 0) {
-      circle.setText('%');
+      circle.setText('HOVER');
     } else {
       circle.setText(value +'%');
     }
@@ -46,7 +46,7 @@ var bar2 = new ProgressBar.Circle(circle2, {
 
     var value = Math.round(circle.value() * 100);
     if (value === 0) {
-      circle.setText('%');
+      circle.setText('HOVER');
     } else {
       circle.setText(value +'%');
     }
@@ -73,7 +73,7 @@ var bar3 = new ProgressBar.Circle(circle3, {
 
     var value = Math.round(circle.value() * 100);
     if (value === 0) {
-      circle.setText('%');
+      circle.setText('HOVER');
     } else {
       circle.setText(value +'%');
     }
@@ -81,11 +81,11 @@ var bar3 = new ProgressBar.Circle(circle3, {
   }
 });
 bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-bar.text.style.fontSize = '1.8rem';
+bar.text.style.fontSize = '1.3rem';
 bar2.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-bar2.text.style.fontSize = '1.8rem';
+bar2.text.style.fontSize = '1.3rem';
 bar3.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-bar3.text.style.fontSize = '1.8rem';
+bar3.text.style.fontSize = '1.3rem';
 
 
     

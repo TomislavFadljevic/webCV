@@ -4,7 +4,7 @@ jQuery(document).ready(function() {
         classToAdd: 'see animated pulse',
         offset: 100
        });
-    jQuery('.barContent').addClass("unsee").viewportChecker({
+    jQuery('.profileImg').addClass("unsee").viewportChecker({
         classToAdd: 'see animated fadeIn',
         offset: 100
        });
